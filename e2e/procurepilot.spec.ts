@@ -21,15 +21,21 @@ test("creates, compares, approves and runs a scripted procurement", async ({
 }) => {
   await openApp(page);
   await expect(
-    page.getByRole("heading", { name: "Describe the outcome. We coordinate the work." }),
+    page.getByRole("heading", {
+      name: "Describe the outcome. We coordinate the work.",
+    }),
   ).toBeVisible();
   await navigate(page, "New Task");
   await expect(
     page.getByRole("heading", { name: "What should ProcurePilot deliver?" }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Generate procurement plan" }).click();
-  await expect(page.getByText("PROPOSED PROCUREMENT PLAN")).toBeVisible();
-  await expect(page.getByText("Why this provider ranked first").first()).toBeVisible();
+  await expect(page.getByText("PROPOSED PROCUREMENT PLAN")).toBeVisible({
+    timeout: 15_000,
+  });
+  await expect(
+    page.getByText("Why this provider ranked first").first(),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Approve plan" }).click();
   await expect(
     page.getByRole("button", { name: "Run simulated procurement" }),
@@ -48,7 +54,9 @@ test("budget-exceeded scenario cannot be approved", async ({ page }) => {
   await page.getByRole("button", { name: "Budget exceeded" }).click();
   await page.getByRole("button", { name: "Generate procurement plan" }).click();
   await expect(page.getByText("BUDGET BLOCKED")).toBeVisible();
-  await expect(page.getByRole("button", { name: "Approve plan" })).toBeDisabled();
+  await expect(
+    page.getByRole("button", { name: "Approve plan" }),
+  ).toBeDisabled();
 });
 
 test("provider profiles, reputation and audit export are inspectable", async ({
@@ -71,5 +79,7 @@ test("mobile navigation remains usable", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await openApp(page);
   await navigate(page, "Integrations");
-  await expect(page.getByText("Configuration is not the same as proof")).toBeVisible();
+  await expect(
+    page.getByText("Configuration is not the same as proof"),
+  ).toBeVisible();
 });

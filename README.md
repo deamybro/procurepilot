@@ -68,11 +68,11 @@ Task and provider-job transitions are explicit and invalid transitions throw.
 
 ## Built-in providers
 
-| Provider | Capability | Demo price | Demo behavior |
-| --- | --- | ---: | --- |
-| Research Brief Agent | Research synthesis | 1.20 USDC | Seeded or supplied sources; never claims live research |
-| Website Audit Agent | Static positioning audit | 0.85 USDC | Seeded demo; SSRF-safe live boundary |
-| Web3 Basic Risk Agent | Scoped address overview | 1.10 USDC | Deterministic facts and non-audit disclaimer |
+| Provider              | Capability               | Demo price | Demo behavior                                          |
+| --------------------- | ------------------------ | ---------: | ------------------------------------------------------ |
+| Research Brief Agent  | Research synthesis       |  1.20 USDC | Seeded or supplied sources; never claims live research |
+| Website Audit Agent   | Static positioning audit |  0.85 USDC | Seeded demo; SSRF-safe live boundary                   |
+| Web3 Basic Risk Agent | Scoped address overview  |  1.10 USDC | Deterministic facts and non-audit disclaimer           |
 
 Two additional local comparison profiles make ranking and fallback behavior
 visible without presenting them as on-chain identities.
@@ -193,10 +193,11 @@ Dexie, mock x402 and official AgentKit action boundaries.
 
 ## Deployment
 
-The demo is stateless on the server and persists records only in browser
-IndexedDB. It needs no paid add-on or custom domain. See
-[docs/deployment.md](docs/deployment.md). Free personal tiers are not suitable
-for unlimited production use.
+The public demo is deployed on Vercel at
+[procurepilot-goat.vercel.app](https://procurepilot-goat.vercel.app). It is
+stateless on the server and persists records only in browser IndexedDB. No paid
+add-on or custom domain is required. See [docs/deployment.md](docs/deployment.md).
+Free personal tiers are not suitable for unlimited production use.
 
 ## Security limitations
 

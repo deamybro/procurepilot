@@ -5,6 +5,7 @@ node_modules/
 .next/
 dist/
 .wrangler/
+.vercel/
 coverage/
 playwright-report/
 test-results/

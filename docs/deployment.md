@@ -5,9 +5,11 @@
 - [x] Browser records use IndexedDB.
 - [x] Missing integrations fail safely.
 - [x] No paid add-on or custom domain is required.
-- [ ] Create/choose a free personal-project deployment.
-- [ ] Verify production demo, API health and mobile layout.
-- [ ] Record the deployment URL in the claims checklist.
+- [x] Deploy to Vercel as a free personal project.
+- [x] Verify the production app and API health endpoint.
+- [x] Record the deployment URL in the claims checklist.
 
-External deployment requires explicit user approval. A free hobby tier is for a
-personal demonstration, not unlimited production usage.
+Production demo: [procurepilot-goat.vercel.app](https://procurepilot-goat.vercel.app)
+
+The Vercel Hobby tier is appropriate for this personal demonstration, not
+unlimited production usage.
