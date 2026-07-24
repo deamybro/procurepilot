@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# builds and local runtimes
+.next/
+dist/
+.wrangler/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# environment and credentials
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+
+# editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
