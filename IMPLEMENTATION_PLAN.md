@@ -17,7 +17,7 @@ branding is copied from prior Pharos projects.
   `https://rpc.testnet3.goat.network`.
 - DIRECT is the standard x402 mode.
 - Google recommends the `@google/genai` SDK. The default remains
-  `gemini-2.5-flash`, which supports structured output and has a free tier.
+  `gemini-3.6-flash`, which supports structured output and has a free tier.
 
 ## Delivery phases
 

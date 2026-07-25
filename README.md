@@ -82,7 +82,7 @@ visible without presenting them as on-chain identities.
 `ScriptedDemoPlanner` is deterministic and always available. `GeminiPlanner`
 uses the official `@google/genai` SDK, structured output, a 12-second timeout
 and Zod validation when `GEMINI_API_KEY` exists. The default model is
-`gemini-2.5-flash`. AI output cannot authorize or execute payment.
+`gemini-3.6-flash`. AI output cannot authorize or execute payment.
 
 ## Provider ranking
 
@@ -141,7 +141,7 @@ is not an immutable blockchain audit trail.
 
 1. Copy `.env.example` to ignored `.env.local`.
 2. Add `GEMINI_API_KEY` directly in that local file.
-3. Keep `GEMINI_MODEL=gemini-2.5-flash` or choose another free-tier model you
+3. Keep `GEMINI_MODEL=gemini-3.6-flash` or choose another free-tier model you
    have independently verified.
 4. Set `NEXT_PUBLIC_APP_MODE=ai-demo`.
 

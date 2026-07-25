@@ -8,9 +8,7 @@ export const GeminiDraftSchema = z.object({
   title: z.string().min(3).max(120),
   description: z.string().min(10).max(2_000),
   capabilities: z
-    .array(
-      z.enum(["research-brief", "website-audit", "web3-basic-risk"]),
-    )
+    .array(z.enum(["research-brief", "website-audit", "web3-basic-risk"]))
     .min(1)
     .max(3),
   outputRequirements: z.array(z.string().min(3)).min(1).max(8),
@@ -27,7 +25,7 @@ export class GeminiPlanner implements Planner {
 
   constructor(
     private readonly apiKey = process.env.GEMINI_API_KEY,
-    private readonly model = process.env.GEMINI_MODEL ?? "gemini-2.5-flash",
+    private readonly model = process.env.GEMINI_MODEL ?? "gemini-3.6-flash",
     registry = new LocalProviderRegistry(),
   ) {
     this.fallback = new ScriptedDemoPlanner(registry);
@@ -56,7 +54,6 @@ export class GeminiPlanner implements Planner {
       config: {
         responseMimeType: "application/json",
         responseJsonSchema: schema,
-        temperature: 0.1,
         maxOutputTokens: 1_200,
       },
     });
