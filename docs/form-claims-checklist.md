@@ -8,7 +8,7 @@
 | Real GOAT testnet payment completed | NO                                | No transaction link                                                               |
 | ERC-8004 identity integrated        | YES, ADAPTER BOUNDARY ONLY        | Nine official actions registered; no agent ID                                     |
 | ERC-8004 reputation integrated      | YES, ADAPTER BOUNDARY ONLY        | Read/feedback factories registered; no on-chain evidence                          |
-| Gemini AI working                   | NO                                | Code and validation exist; no key configured or live call evidenced               |
+| Gemini AI working                   | YES                               | Live structured plan verified on the production Vercel deployment                  |
 | Scripted demo working               | YES                               | `npm run demo` and automated tests                                                |
 | Faucet requested                    | MANUAL USER CONFIRMATION REQUIRED | Not requested                                                                     |
 | ClawUp used                         | NO                                | No evidence or dependency                                                         |
