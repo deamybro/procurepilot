@@ -80,7 +80,7 @@ visible without presenting them as on-chain identities.
 ## AI planner
 
 `ScriptedDemoPlanner` is deterministic and always available. `GeminiPlanner`
-uses the official `@google/genai` SDK, structured output, a 12-second timeout
+uses the official `@google/genai` SDK, structured output, a 45-second timeout
 and Zod validation when `GEMINI_API_KEY` exists. The default model is
 `gemini-3.6-flash`. AI output cannot authorize or execute payment.
 

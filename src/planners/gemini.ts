@@ -58,7 +58,7 @@ export class GeminiPlanner implements Planner {
       },
     });
     const timeout = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error("Gemini planner timed out.")), 12_000),
+      setTimeout(() => reject(new Error("Gemini planner timed out.")), 45_000),
     );
     const response = await Promise.race([requestPromise, timeout]);
     const draft = GeminiDraftSchema.parse(JSON.parse(response.text ?? "{}"));
